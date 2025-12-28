@@ -9,33 +9,35 @@ import Image from "next/image";
 export function Footer() {
   return (
     <motion.footer
-      className="bg-background border-t"
+      className="bg-background/50 border-t border-border/40 backdrop-blur-sm"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.8, duration: 0.8 }}
     >
-      <div className="max-w-5xl mx-auto px-8 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="md:col-span-1 max-w-sm">
-            <div className="flex justify-start items-center gap-2 mb-4">
-              <Image 
-                src="/logo.svg" 
-                alt="OpenCut" 
-                width={24} 
-                height={24}
-                className="invert dark:invert-0"
-              />
-              <span className="font-bold text-lg">OpenCut</span>
+          <div className="md:col-span-2 max-w-sm">
+            <div className="flex items-center gap-2 mb-6">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Image
+                  src="/logo.svg"
+                  alt="AI Profit Lab"
+                  width={24}
+                  height={24}
+                  className="invert dark:invert-0"
+                />
+              </div>
+              <span className="font-bold text-xl tracking-tight">AI Profit Lab</span>
             </div>
-            <p className="text-sm md:text-left text-muted-foreground mb-5">
-              The open source video editor that gets the job done. Simple,
-              powerful, and works on any platform.
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+              The open source video editor that gets the job done.
+              Simple, powerful, and built with modern technologies for everyone.
             </p>
-            <div className="flex justify-start gap-3">
+            <div className="flex gap-4">
               <Link
-                href="https://github.com/OpenCut-app/OpenCut"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="https://www.ai-profitlab.io/"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +45,7 @@ export function Footer() {
               </Link>
               <Link
                 href="https://x.com/OpenCutApp"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,7 +53,7 @@ export function Footer() {
               </Link>
               <Link
                 href="https://discord.com/invite/Mu3acKZvCp"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -60,68 +62,68 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-12 justify-start items-start py-2">
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="/roadmap"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Roadmap
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Privacy policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/terms"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Terms of use
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="font-semibold text-foreground mb-6 uppercase text-xs tracking-widest">Resources</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/roadmap"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  Roadmap
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  Privacy policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  Terms of use
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            {/* Company Links */}
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Company</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="/contributors"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Contributors
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://github.com/OpenCut-app/OpenCut/blob/main/README.md"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    About
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          {/* Company Links */}
+          <div>
+            <h3 className="font-semibold text-foreground mb-6 uppercase text-xs tracking-widest">Company</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/contributors"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  Contributors
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.ai-profitlab.io/"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  About
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-2 flex flex-col md:flex-row justify-between items-start gap-4">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span>© 2025 OpenCut, All Rights Reserved</span>
+        <div className="pt-8 border-t border-border/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+          <p>© 2025 AI Profit Lab. All Rights Reserved.</p>
+          <div className="flex gap-6">
+            <span className="hover:text-foreground transition-colors cursor-pointer">Status</span>
+            <span className="hover:text-foreground transition-colors cursor-pointer">Changelog</span>
           </div>
         </div>
       </div>
